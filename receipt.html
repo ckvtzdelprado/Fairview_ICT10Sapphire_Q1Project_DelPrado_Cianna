@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pawfect Pets - Receipt Generator</title>
+
+    <link rel="stylesheet"
+          href="https://pyscript.net/releases/2025.8.1/core.css">
+
+    <script type="module"
+            src="https://pyscript.net/releases/2025.8.1/core.js">
+    </script>
+    <style>
+    body {
+        background-color: lightblue;
+        font-family: Arial;
+        text-align: center;
+    }
+
+    header {
+        background-color: mediumpurple;
+        color: white;
+        padding: 20px;
+    }
+
+    main {
+        background-color: white;
+        width: 70%;
+        margin: 30px auto;
+        padding: 25px;
+        border-radius: 15px;
+    }
+
+    h2 {
+        color: mediumpurple;
+    }
+
+    input, select {
+        padding: 8px;
+        border: 2px solid mediumpurple;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: hotpink;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    #result {
+        background-color: lavender;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 10px;
+    }
+
+    footer {
+        background-color: mediumpurple;
+        color: white;
+        padding: 15px;
+    }
+</style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🐾 Pawfect Pets</h1>
+        <p>Everything your furry friend needs!</p>
+
+        <nav>
+            <a href="index.html">SKU Generator</a> |
+            <a href="receipt.html">Receipt Generator</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <h2>Receipt Generator</h2>
+
+        <p>Select the pet products you want to purchase:</p>
+
+        <label>
+            <input type="checkbox"
+                   class="product"
+                   value="450"
+                   data-name="Dog Food">
+            Dog Food - ₱450
+        </label>
+
+        <br><br>
+
+        <label>
+            <input type="checkbox"
+                   class="product"
+                   value="400"
+                   data-name="Cat Food">
+            Cat Food - ₱400
+        </label>
+
+        <br><br>
+
+        <label>
+            <input type="checkbox"
+                   class="product"
+                   value="150"
+                   data-name="Chew Toy">
+            Chew Toy - ₱150
+        </label>
+
+        <br><br>
+
+        <label>
+            <input type="checkbox"
+                   class="product"
+                   value="200"
+                   data-name="Pet Collar">
+            Pet Collar - ₱200
+        </label>
+
+        <br><br>
+
+        <label>
+            <input type="checkbox"
+                   class="product"
+                   value="250"
+                   data-name="Pet Shampoo">
+            Pet Shampoo - ₱250
+        </label>
+
+        <br><br>
+
+        <label>
+            <input type="checkbox"
+                   class="product"
+                   value="800"
+                   data-name="Pet Bed">
+            Pet Bed - ₱800
+        </label>
+
+        <br><br>
+
+        <button py-click="generate_receipt">
+            Generate Receipt
+        </button>
+
+        <hr>
+
+        <h2>Receipt</h2>
+
+        <div id="receipt">
+            Select your products and click Generate Receipt.
+        </div>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>🐾 Pawfect Pets</p>
+        <p>Your pet's happiness matters!</p>
+        <p>© 2026 Pawfect Pets</p>
+    </footer>
+
+    <script type="py" src="receipt.py"></script>
+
+</body>
+</html>

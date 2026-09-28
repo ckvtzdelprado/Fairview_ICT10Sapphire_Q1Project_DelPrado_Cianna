@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pawfect Pets - SKU Generator</title>
+
+    <link rel="stylesheet"
+          href="https://pyscript.net/releases/2025.8.1/core.css">
+
+    <script type="module"
+            src="https://pyscript.net/releases/2025.8.1/core.js">
+    </script>
+    <style>
+    body {
+        background-color: lightblue;
+        font-family: Arial;
+        text-align: center;
+    }
+
+    header {
+        background-color: mediumpurple;
+        color: white;
+        padding: 20px;
+    }
+
+    main {
+        background-color: white;
+        width: 70%;
+        margin: 30px auto;
+        padding: 25px;
+        border-radius: 15px;
+    }
+
+    h2 {
+        color: mediumpurple;
+    }
+
+    input, select {
+        padding: 8px;
+        border: 2px solid mediumpurple;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: hotpink;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    #result {
+        background-color: lavender;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 10px;
+    }
+
+    footer {
+        background-color: mediumpurple;
+        color: white;
+        padding: 15px;
+    }
+</style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🐾 Pawfect Pets</h1>
+        <p>Everything your furry friend needs!</p>
+
+        <nav>
+            <a href="index.html">SKU Generator</a> |
+            <a href="receipt.html">Receipt Generator</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <h2>SKU Generator</h2>
+
+        <p>
+            Create a unique Stock Keeping Unit for your pet products.
+        </p>
+
+        <label for="category">Product Category:</label>
+
+        <select id="category">
+            <option value="FOOD">Food</option>
+            <option value="TOY">Toy</option>
+            <option value="GROOM">Grooming</option>
+            <option value="ACC">Accessories</option>
+            <option value="BED">Bedding</option>
+        </select>
+
+        <br><br>
+
+        <label for="product">Product Name:</label>
+
+        <input type="text"
+               id="product"
+               placeholder="Example: Dog Food">
+
+        <br><br>
+
+        <label for="stock">Stock Quantity:</label>
+
+        <input type="number"
+               id="stock"
+               min="1"
+               placeholder="Example: 25">
+
+        <br><br>
+
+        <button py-click="generate_sku">
+            Generate SKU
+        </button>
+
+        <br><br>
+
+        <h3>Your SKU:</h3>
+
+        <p id="result">
+            Your SKU will appear here.
+        </p>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>🐾 Pawfect Pets</p>
+        <p>Your pet's happiness matters!</p>
+        <p>© 2026 Pawfect Pets</p>
+    </footer>
+
+    <script type="py" src="main.py"></script>
+
+</body>
+</html>
